@@ -2,12 +2,12 @@ const btn = document.querySelector(".btn");
 const inputText = document.querySelector(".input-text");
 const result = document.querySelector(".result");
 
-const counterVowel = () => {
+const countVowel = () => {
   let str = inputText.value;
-  var m = str.match(/[aeiou]/gi);
-  let vowelCount = m === null ? 0 : m.length;
+  const m = str.match(/[aeiou]/gi);
+  const vowelCount = m === null ? 0 : m.length;
 
-  result.innerHTML = str + " has " + vowelCount + " vowel";
+  result.innerHTML = `${str.toUpperCase()} has ${vowelCount} vowels`;
 };
 
-btn.addEventListener("click", counterVowel);
+btn.addEventListener("click", countVowel);
