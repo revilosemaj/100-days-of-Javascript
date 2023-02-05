@@ -1,12 +1,14 @@
 const coupon = document.querySelector(".coupon");
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", (e) => {
+const copyText = (e) => {
   e.preventDefault();
-  navigator.clipboard.writeText(coupon.value);
 
-  btn.innerHTML = "copied!!";
-  setTimeout(() => {
-    btn.innerHTML = "copy";
-  }, 1000);
-});
+  navigator.clipboard.writeText(coupon.value).then(() => {
+    btn.innerHTML = "copied!!";
+    setTimeout(() => {
+      btn.innerHTML = "copy";
+    }, 3000);
+  });
+};
+btn.addEventListener("click", copyText);
