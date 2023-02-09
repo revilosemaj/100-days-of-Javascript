@@ -90,8 +90,8 @@ const copy = (e) => {
   });
 };
 
-btnGenerate.addEventListener("click", generateDownloadLink);
-btnClear.addEventListener("click", clearDownloadLink);
 btnCopy.addEventListener("click", copy);
 btnCopyAudio.addEventListener("click", copy);
 btnCopyVideo.addEventListener("click", copy);
+btnGenerate.addEventListener("click", generateDownloadLink);
+btnClear.addEventListener("click", clearDownloadLink);
