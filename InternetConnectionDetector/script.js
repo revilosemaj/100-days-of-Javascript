@@ -14,12 +14,6 @@ const setOffline = () => {
   internetStatus.innerHTML = "OOPS!! Your Internet connection is down";
 };
 
-const setPending = () => {
-  internetImage.src = "./images/offline.png";
-  mainSection.classList.remove("online");
-  internetStatus.innerHTML = "Pending connection";
-};
-
 const connectionStatus = async () => {
   try {
     const fetchResult = await fetch(
